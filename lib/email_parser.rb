@@ -10,16 +10,15 @@ class EmailAddressParser
 
     attr_accessor :emails
 
+
+
     def parse
-        if @emails.include?(',')
-            email_array = @emails.split(/\s|, /)
-        else
-            email_array = @emails.split
-           
-        end
+        email_array = @emails.split(/\s|, /)
         email_array = email_array.uniq
         email_array
     end
+
+
 
 
 
